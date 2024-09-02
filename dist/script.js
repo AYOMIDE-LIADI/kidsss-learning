@@ -20,7 +20,7 @@ var paste = document.getElementById('timer');
         sec++
         if(sec === 60){
             clearInterval(timer)
-            paste.innerHTML = 0;
+            paste.innerHTML = "00:00";
             let sec2 = 0
             if(sec2 === 0){
               timer = setInterval(()=>{
@@ -44,7 +44,7 @@ var paste = document.getElementById('timer');
   ]
 
   let currentword ='';
-  let score = 0;
+  
 
   
   function displayRandomImage() {
@@ -54,7 +54,7 @@ var paste = document.getElementById('timer');
     imgElement.src = imageObject.src;
     currentWord = imageObject.word;
 
-    setInterval(displayRandomImage, 20000);
+    setInterval(displayRandomImage, 60000);
 
     document.getElementById('enter').addEventListener('click', function(){
         const inputElement = document.getElementById('textarea');
